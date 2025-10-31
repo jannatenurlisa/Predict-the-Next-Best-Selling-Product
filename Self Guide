@@ -1,0 +1,37 @@
+📂 predict-next-best-selling-product/
+│
+├── 📄 README.md                 ← Overview of project (concept, workflow, features, insights)
+├── 📄 environment_setup.md      ← Setup instructions (virtual env + DB setup)
+├── 📄 requirements.txt          ← Python dependencies
+│
+├── 🧮 scripts/                  ← Main workflow scripts
+│   ├── 01_data_import.py        ← Load raw data (CSV/API → SQLite)
+│   ├── 02_data_cleaning.py      ← Clean + preprocess data using pandas
+│   ├── 03_sql_queries.sql       ← SQL queries for aggregations, joins, validation
+│   ├── 04_feature_engineering.py← Create metrics: growth rate, seasonality, popularity
+│   ├── 05_trend_analysis.py     ← Rolling averages, moving sums, product trend detection
+│   ├── 06_forecasting.py        ← Predict future sales using regression / ARIMA
+│   └── 07_visualization.py      ← Generate heatmaps, trend lines, ranking charts
+│
+├── 🗄️ database/                 ← SQL database + scripts
+│   ├── sales_data.db            ← SQLite database (generated)
+│   ├── schema.sql               ← Table creation & schema definition
+│   └── sample_queries.sql       ← Common SQL queries for data exploration
+│
+├── 📊 data/
+│   ├── raw/                     ← Original CSVs (Etsy/Shopify/Gumroad)
+│   └── processed/               ← Cleaned CSVs or SQL-exported tables
+│
+├── 📈 outputs/
+│   ├── charts/                  ← Generated graphs
+│   ├── predictions/             ← Forecast outputs (CSV/JSON)
+│   └── reports/                 ← Analysis summaries or dashboards
+│
+├── 🧠 dashboard/ (optional)     ← Interactive Streamlit dashboard
+│   └── app.py
+│
+└── 🗒️ notes/
+    ├── project_plan.md          ← Your planning notes (like the Notion brief)
+    ├── data_sources.md          ← Info on datasets (Etsy/Shopify links, schema)
+    ├── sql_experiments.md       ← Notes on queries, joins, insights
+    └── reflections.md           ← Lessons learned, next ideas
